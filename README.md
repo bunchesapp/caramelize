@@ -10,13 +10,13 @@
 Works when any child is a list, struct, or any other primitive type. Gracefully ignores DateTime structs.
 
 ## Installation
-1. Add carmelize to your list of dependencies in mix.exs:
+Add carmelize to your list of dependencies in mix.exs:
 ```elixir
 def deps do
   [{:carmelize, "~> 0.1.0"}]
 end
 ```
-2. Ensure carmelize is started before your application:
+Ensure carmelize is started before your application:
 ``` elixir
 def application do
   [applications: [:carmelize]]
