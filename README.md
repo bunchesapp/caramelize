@@ -2,7 +2,7 @@
 > Gooey chewy library to camelize keys in a map
 
 <center>
-<img src="http://i.imgur.com/LPIHMQA.gif" alt="The soft, warm, cinnamon pretzels are your map, and the decadent caramel is this library" height="400">
+<img src="http://i.imgur.com/LPIHMQA.gif" title="The soft, warm, cinnamon pretzels are your map, and the decadent caramel is this library" height="400">
 </center>
 
 #### An Elixir library for converting the keys of snake_case maps to camelCase

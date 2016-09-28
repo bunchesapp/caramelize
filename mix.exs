@@ -42,7 +42,7 @@ defmodule Carmelize.Mixfile do
       licenses: ["Apache 2.0"],
       links: %{
         "GitHub" => "https://github.com/SRVentures/carmelize",
-        "Docs" => "https://github.com/SRVentures/carmelize"
+        "Docs" => "https://hexdocs.pm/carmelize/0.1.0/"
       }
     ]
   end
