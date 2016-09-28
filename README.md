@@ -13,13 +13,13 @@ Works when any child is a list, struct, or any other primitive type. Gracefully 
 Add caramelize to your list of dependencies in mix.exs:
 ```elixir
 def deps do
-  [{:carmelize, "~> 0.1.0"}]
+  [{:caramelize, "~> 0.1.0"}]
 end
 ```
 Ensure caramelize is started before your application:
 ``` elixir
 def application do
-  [applications: [:carmelize]]
+  [applications: [:caramelize]]
 end
 ```
 
@@ -37,7 +37,7 @@ awesome_map = %{test_foo: "foo",
                 test_boz: %{awesome_lib: "Thanks man!"}
               }
 
-awesomer_map = Carmelize.camelize(awesome_map)
+awesomer_map = Caramelize.camelize(awesome_map)
 
 ```
 
