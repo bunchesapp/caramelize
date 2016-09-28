@@ -1,2 +1,2 @@
-{:ok, _} = Application.ensure_all_started(:carmelize)
+{:ok, _} = Application.ensure_all_started(:caramelize)
 ExUnit.start

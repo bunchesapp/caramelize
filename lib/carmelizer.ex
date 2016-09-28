@@ -1,4 +1,4 @@
-defmodule Carmelize do
+defmodule Caramelize do
   @moduledoc """
   An Elixir library for converting the keys of snake_case maps to camelCase
   """

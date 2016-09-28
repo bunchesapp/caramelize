@@ -5,10 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
-    <title>README – Carmelize v0.1.0</title>
+    <title>README – Caramelize v0.1.0</title>
     <link rel="stylesheet" href="dist/app-bbdf358507.css" />
-    
-      <link rel="canonical" href="https://hexdocs.pm/carmelize/readme.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -25,7 +23,7 @@
   <a href="api-reference.html" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        Carmelize
+        Caramelize
       </h1>
       <h2 class="sidebar-projectVersion">
         v0.1.0
@@ -60,11 +58,11 @@
     <div id="content" class="content-inner">
 
 
-<h1>Carmelize</h1>
+<h1>Caramelize</h1>
 <blockquote><p>Gooey chewy library to camelize keys in a map</p>
 </blockquote>
 <center>
-<img src="http://i.imgur.com/LPIHMQA.gif" alt="The soft, warm, cinnamon pretzels are your map, and the decadent caramel is this library" height="400">
+<img src="http://i.imgur.com/LPIHMQA.gif" title="The soft, warm, cinnamon pretzels are your map, and the decadent caramel is this library" height="400">
 </center><h4>An Elixir library for converting the keys of snake_case maps to camelCase</h4>
 <p>Works when any child is a list, struct, or any other primitive type. Gracefully ignores DateTime structs.</p>
 <h2 id="installation" class="section-heading">
@@ -72,26 +70,20 @@
   Installation
 </h2>
 
-<ol>
-<li>Add carmelize to your list of dependencies in mix.exs:
-</li>
-</ol>
+<p>Add caramelize to your list of dependencies in mix.exs:</p>
 <pre><code class="elixir">def deps do
-  [{:carmelize, &quot;~&gt; 0.1.0&quot;}]
+  [{:caramelize, &quot;~&gt; 0.1.0&quot;}]
 end</code></pre>
-<ol>
-<li>Ensure carmelize is started before your application:
-</li>
-</ol>
+<p>Ensure caramelize is started before your application:</p>
 <pre><code class="elixir">def application do
-  [applications: [:carmelize]]
+  [applications: [:caramelize]]
 end</code></pre>
 <h2 id="usage" class="section-heading">
   <a href="#usage" class="hover-link"><i class="icon-link"></i></a>
   Usage
 </h2>
 
-<p>Simply pass any map into the <code class="inline">Carmelize.camelize()</code> function, and it will return a map with all keys converted to camelCase.</p>
+<p>Simply pass any map into the <code class="inline">Caramelize.camelize()</code> function, and it will return a map with all keys converted to camelCase.</p>
 <h2 id="example" class="section-heading">
   <a href="#example" class="hover-link"><i class="icon-link"></i></a>
   Example
@@ -103,7 +95,7 @@ end</code></pre>
                 test_boz: %{awesome_lib: &quot;Thanks man!&quot;}
               }
 
-awesomer_map = Carmelize.camelize(awesome_map)
+awesomer_map = Caramelize.camelize(awesome_map)
 </code></pre>
 <p><em>Output:</em></p>
 <pre><code class="elixir">awesomer_map = %{&quot;testFoo&quot; =&gt; &quot;foo&quot;,
@@ -116,7 +108,7 @@ awesomer_map = Carmelize.camelize(awesome_map)
   Contributing
 </h2>
 
-<p>Pull requests welcome! Add tests to the <code class="inline">carmelize_test.exs</code> and ensure all tests are passing before PR submission.</p>
+<p>Pull requests welcome! Add tests to the <code class="inline">caramelize_test.exs</code> and ensure all tests are passing before PR submission.</p>
 
       <footer class="footer">
         <p>

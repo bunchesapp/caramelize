@@ -1,8 +1,8 @@
-defmodule Carmelize.Mixfile do
+defmodule Caramelize.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :carmelize,
+    [app: :caramelize,
      version: "0.1.0",
      elixir: "~> 1.2",
      description: description,
@@ -11,8 +11,8 @@ defmodule Carmelize.Mixfile do
      start_permanent: Mix.env == :prod,
      deps: deps,
      #Docs
-     name: "Carmelize",
-     source_url: "https://github.com/SRVentures/carmelize",
+     name: "Caramelize",
+     source_url: "https://github.com/SRVentures/caramelize",
      docs: [extras: ["README.md"]]
    ]
   end
@@ -41,8 +41,8 @@ defmodule Carmelize.Mixfile do
       maintainers: ["James Rasmussen", "Jake Hasler"],
       licenses: ["Apache 2.0"],
       links: %{
-        "GitHub" => "https://github.com/SRVentures/carmelize",
-        "Docs" => "https://hexdocs.pm/carmelize/0.1.0/"
+        "GitHub" => "https://github.com/SRVentures/caramelize",
+        "Docs" => "https://hexdocs.pm/caramelize/0.1.0/"
       }
     ]
   end
