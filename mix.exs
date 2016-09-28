@@ -31,7 +31,7 @@ defmodule Carmelize.Mixfile do
 
   defp package do
     [
-      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      files: ["lib", "mix.exs", "README*"],
       maintainers: ["James Rasmussen", "Jake Hasler"],
       licenses: ["Apache 2.0"],
       links: %{
