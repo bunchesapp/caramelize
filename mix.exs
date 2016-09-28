@@ -26,7 +26,7 @@ defmodule Carmelize.Mixfile do
   end
 
   defp deps do
-    [{:ex_doc, github: "elixir-lang/ex_doc"}]
+    []
   end
 
   defp package do
