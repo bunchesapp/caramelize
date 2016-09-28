@@ -1,0 +1,2 @@
+#!/bin/bash
+mix credo --strict --format=oneline

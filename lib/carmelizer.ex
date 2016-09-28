@@ -1,4 +1,8 @@
 defmodule Carmelize do
+  @moduledoc """
+  An Elixir library for converting the keys of snake_case maps to camelCase
+  """
+
   # Camelize atoms in a map
   def camelize(key) when is_atom(key) do
     key |> Atom.to_string |> camelize
