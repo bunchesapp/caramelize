@@ -1,4 +1,4 @@
-# Carmelize
+# Caramelize
 > Gooey chewy library to camelize keys in a map
 
 <center>
@@ -10,13 +10,13 @@
 Works when any child is a list, struct, or any other primitive type. Gracefully ignores DateTime structs.
 
 ## Installation
-Add carmelize to your list of dependencies in mix.exs:
+Add caramelize to your list of dependencies in mix.exs:
 ```elixir
 def deps do
   [{:carmelize, "~> 0.1.0"}]
 end
 ```
-Ensure carmelize is started before your application:
+Ensure caramelize is started before your application:
 ``` elixir
 def application do
   [applications: [:carmelize]]
@@ -25,7 +25,7 @@ end
 
 ## Usage
 
-Simply pass any map into the `Carmelize.camelize()` function, and it will return a map with all keys converted to camelCase.
+Simply pass any map into the `Caramelize.camelize()` function, and it will return a map with all keys converted to camelCase.
 
 
 ## Example
@@ -54,4 +54,4 @@ awesomer_map = %{"testFoo" => "foo",
 
 ## Contributing
 
-Pull requests welcome! Add tests to the `carmelize_test.exs` and ensure all tests are passing before PR submission.
+Pull requests welcome! Add tests to the `caramelize_test.exs` and ensure all tests are passing before PR submission.
