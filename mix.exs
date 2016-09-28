@@ -9,7 +9,12 @@ defmodule Carmelize.Mixfile do
      package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     #Docs
+     name: "Carmelize",
+     source_url: "https://github.com/SRVentures/carmelize",
+     docs: [extras: ["README.md"]]
+   ]
   end
 
   # Configuration for the OTP application
@@ -26,7 +31,7 @@ defmodule Carmelize.Mixfile do
   end
 
   defp deps do
-    []
+    [{:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp package do

@@ -1,0 +1,1 @@
+sidebarNodes={"exceptions":[],"extras":[{"id":"api-reference","title":"API Reference","headers":[]},{"id":"readme","title":"README","headers":[]}],"modules":[{"id":"Carmelize","title":"Carmelize","functions":[{"id":"camelize/1","anchor":"camelize/1"}]}],"protocols":[]}
