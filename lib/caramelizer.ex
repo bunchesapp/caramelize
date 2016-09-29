@@ -44,6 +44,12 @@ defmodule Caramelize do
     date_time
   end
 
+  # if a DateTime struct, just pass it along and
+  # let phoenix handle the serialization
+  def camelize(%Ecto.DateTime{} = date_time) do
+    date_time
+  end
+
   # base camelize function
   def camelize(%{} = map) do
     map
