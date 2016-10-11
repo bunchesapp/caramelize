@@ -96,6 +96,9 @@
     <a href="#camelize/1">camelize(key)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Camelizes a variety of data structures</p>
+</div>
+  
 </div>
 
   </div>
@@ -125,7 +128,7 @@
     </a>
     <span class="signature">camelize(key)</span>
     
-      <a href="https://github.com/SRVentures/caramelize/blob/master/lib/caramelizer.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/SRVentures/caramelize/blob/master/lib/caramelizer.ex#L51" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -133,7 +136,57 @@
   </div>
   
   <section class="docstring">
-    
+    <p>Camelizes a variety of data structures</p>
+<ul>
+<li>atom -&gt; camelizes the atom
+</li>
+<li>string -&gt; camelizes the string
+</li>
+<li>nested map -&gt; camelize the nested map keys
+</li>
+<li>list of maps -&gt; camelize the maps
+</li>
+<li>map -&gt; camelize the keys
+</li>
+<li>DateTime -&gt; pass it straight through for easier serialization
+</li>
+</ul>
+<h2 id="camelize/1-examples" class="section-heading">
+  <a href="#camelize/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="elixir">iex(1)&gt; Caramelize.camelize(&quot;cool_string&quot;)
+&quot;coolString&quot;
+
+iex(2)&gt; Caramelize.camelize(:cool_string)
+&quot;coolString&quot;
+
+iex(3)&gt; Caramelize.camelize(%{cool_atom: &quot;foo&quot;})
+%{&quot;coolAtom&quot; =&gt; &quot;foo&quot;}
+
+iex(4)&gt; Caramelize.camelize(%{&quot;cool_string&quot; =&gt; &quot;bar&quot;})
+%{&quot;coolString&quot; =&gt; &quot;bar&quot;}
+
+iex(5)&gt; Caramelize.camelize(%{cool_atom: %{another_cool_atom: &quot;foo&quot;}})
+%{&quot;coolAtom&quot; =&gt; %{&quot;anotherCoolAtom&quot; =&gt; &quot;foo&quot;}}
+
+iex(6)&gt; Caramelize.camelize(%{&quot;cool_string&quot; =&gt; %{
+...&gt;      &quot;another_cool_string&quot; =&gt; &quot;bar&quot;}
+...&gt;    })
+%{&quot;coolString&quot; =&gt; %{&quot;anotherCoolString&quot; =&gt; &quot;bar&quot;}}
+
+iex(7)&gt; Caramelize.camelize([%{cool_key: &quot;foo&quot;}])
+[%{&quot;coolKey&quot; =&gt; &quot;foo&quot;}]
+
+iex(8)&gt; Caramelize.camelize(%{list_key: [%{foo: 12, bar: 13}]})
+%{&quot;listKey&quot; =&gt; [%{&quot;bar&quot; =&gt; 13, &quot;foo&quot; =&gt; 12}]}
+
+iex(9)&gt; Caramelize.camelize(DateTime.from_unix!(1476219081))
+%DateTime{calendar: Calendar.ISO, day: 11, hour: 20, microsecond: {0, 0},
+ minute: 51, month: 10, second: 21, std_offset: 0, time_zone: &quot;Etc/UTC&quot;,
+ utc_offset: 0, year: 2016, zone_abbr: &quot;UTC&quot;}</code></pre>
+
   </section>
 </div>
 
