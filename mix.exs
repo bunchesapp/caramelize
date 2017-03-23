@@ -33,7 +33,7 @@ defmodule Caramelize.Mixfile do
   defp deps do
     [{:ex_doc, ">= 0.0.0", only: :dev},
      {:credo, "~> 0.4", only: [:dev, :test]},
-     {:ecto, "~> 2.0.0"}]
+     {:ecto, "~> 2.1.3"}]
   end
 
   defp package do
