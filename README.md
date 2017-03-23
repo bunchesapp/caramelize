@@ -13,7 +13,7 @@ Works when any child is a list, struct, or any other primitive type. Gracefully 
 Add caramelize to your list of dependencies in mix.exs:
 ```elixir
 def deps do
-  [{:caramelize, "~> 0.1.0"}]
+  [{:caramelize, "~> 0.1.1"}]
 end
 ```
 Ensure caramelize is started before your application:
