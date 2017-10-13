@@ -20,6 +20,12 @@ defmodule CaramelizeTest do
                                                   "testBaz" => "baz"}]
     end
 
+    test "works with a struct" do
+      assert Caramelize.camelize(%__MODULE__{}) == %{"testFoo" => "foo",
+                                                  "testBar" => "bar",
+                                                  "testBaz" => "baz"}
+    end
+
     test "works with a list of primitives" do
       primitives = [1, "foo", 4.3, :cool_atom]
       assert Caramelize.camelize(primitives) == primitives
