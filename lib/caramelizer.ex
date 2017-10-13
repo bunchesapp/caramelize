@@ -94,6 +94,13 @@ defmodule Caramelize do
     date_time
   end
 
+  # if a struct, convert to map and then camelize
+  def camelize(%{__struct__: _} = map) do
+    map
+    |> Map.from_struct
+    |> camelize
+  end
+
   # base camelize function
   def camelize(%{} = map) do
     map
