@@ -82,6 +82,12 @@ defmodule Caramelize do
     {key, value}
   end
 
+  # if a NaiveDateTime struct, just pass it along and
+  # let phoenix handle the serialization
+  def camelize(%NaiveDateTime{} = date_time) do
+    date_time
+  end
+
   # if a DateTime struct, just pass it along and
   # let phoenix handle the serialization
   def camelize(%DateTime{} = date_time) do
