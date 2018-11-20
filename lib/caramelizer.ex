@@ -82,22 +82,8 @@ defmodule Caramelize do
     {key, value}
   end
 
-  # if a NaiveDateTime struct, just pass it along and
-  # let phoenix handle the serialization
-  def camelize(%NaiveDateTime{} = date_time) do
-    date_time
-  end
-
-  # if a DateTime struct, just pass it along and
-  # let phoenix handle the serialization
-  def camelize(%DateTime{} = date_time) do
-    date_time
-  end
-
-  # if a DateTime struct, just pass it along and
-  # let phoenix handle the serialization
-  def camelize(%Ecto.DateTime{} = date_time) do
-    date_time
+  def camelize(%struct{} = datetime) when struct in [DateTime, Ecto.DateTime, NaiveDateTime] do
+    datetime
   end
 
   # if a struct, convert to map and then camelize
