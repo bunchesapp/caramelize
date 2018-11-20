@@ -7,10 +7,8 @@ defmodule CaramelizeTest do
     test_baz: "baz"
 
   describe "camelize/1" do
-
-
     test "works with an Ecto.DateTime struct" do
-      {:ok, now} = Ecto.DateTime.cast("2016-05-21 12:12:12")
+      now = %{__struct__: Ecto.DateTime, right_now: "right now!"}
       assert Caramelize.camelize(now) == now
     end
 
@@ -31,5 +29,4 @@ defmodule CaramelizeTest do
       assert Caramelize.camelize(primitives) == primitives
     end
   end
-
 end
