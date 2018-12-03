@@ -82,7 +82,7 @@ defmodule Caramelize do
     {key, value}
   end
 
-  def camelize(%struct{} = datetime) when struct in [DateTime, Ecto.DateTime, NaiveDateTime] do
+  def camelize(%struct{} = datetime) when struct in [DateTime, NaiveDateTime] do
     datetime
   end
 
