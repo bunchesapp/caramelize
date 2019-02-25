@@ -49,14 +49,12 @@ defmodule Caramelize do
 
   # Camelize atoms in a map
   def camelize(key) when is_atom(key) do
-    key |> Atom.to_string |> camelize
+    key |> Atom.to_string() |> camelize
   end
 
   # Camelize strings in a map
   def camelize(key) when is_binary(key) do
-    capitalized = Macro.camelize(key)
-    <<first>> <> rest = capitalized
-    String.downcase(<<first>>) <> rest
+    Recase.to_camel(key)
   end
 
   # if a nested map, camelize the nested map keys
@@ -67,12 +65,16 @@ defmodule Caramelize do
   # if a list of maps, camelize the maps
   def camelize(map_list) when is_list(map_list) do
     Enum.map(map_list, fn
-      (%{__struct__: _} = map) ->
+      %{__struct__: _} = map ->
         map
-        |> Map.from_struct
+        |> Map.from_struct()
         |> camelize
-      (map = %{}) -> camelize(map)
-      any -> any
+
+      map = %{} ->
+        camelize(map)
+
+      any ->
+        any
     end)
   end
 
@@ -89,7 +91,7 @@ defmodule Caramelize do
   # if a struct, convert to map and then camelize
   def camelize(%{__struct__: _} = map) do
     map
-    |> Map.from_struct
+    |> Map.from_struct()
     |> camelize
   end
 
@@ -97,6 +99,6 @@ defmodule Caramelize do
   def camelize(%{} = map) do
     map
     |> Enum.map(&__MODULE__.camelize/1)
-    |> Map.new
+    |> Map.new()
   end
 end
