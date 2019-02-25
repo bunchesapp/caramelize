@@ -3,8 +3,8 @@ defmodule CaramelizeTest do
   doctest Caramelize
 
   defstruct test_foo: "foo",
-    test_bar: "bar",
-    test_baz: "baz"
+            test_bar: "bar",
+            test_baz: "baz"
 
   describe "camelize/1" do
     test "works with an Ecto.DateTime struct" do
@@ -13,15 +13,17 @@ defmodule CaramelizeTest do
     end
 
     test "works with a list of structs" do
-      assert Caramelize.camelize([%__MODULE__{}]) == [%{"testFoo" => "foo",
-                                                  "testBar" => "bar",
-                                                  "testBaz" => "baz"}]
+      assert Caramelize.camelize([%__MODULE__{}]) == [
+               %{"testFoo" => "foo", "testBar" => "bar", "testBaz" => "baz"}
+             ]
     end
 
     test "works with a struct" do
-      assert Caramelize.camelize(%__MODULE__{}) == %{"testFoo" => "foo",
-                                                  "testBar" => "bar",
-                                                  "testBaz" => "baz"}
+      assert Caramelize.camelize(%__MODULE__{}) == %{
+               "testFoo" => "foo",
+               "testBar" => "bar",
+               "testBaz" => "baz"
+             }
     end
 
     test "works with a list of primitives" do

@@ -2,19 +2,20 @@ defmodule Caramelize.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :caramelize,
-     version: "0.2.0",
-     elixir: "~> 1.7",
-     description: description(),
-     package: package(),
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps(),
-     #Docs
-     name: "Caramelize",
-     source_url: "https://github.com/SRVentures/caramelize",
-     docs: [extras: ["README.md"]]
-   ]
+    [
+      app: :caramelize,
+      version: "1.0.0",
+      elixir: "~> 1.7",
+      description: description(),
+      package: package(),
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      deps: deps(),
+      # Docs
+      name: "Caramelize",
+      source_url: "https://github.com/SRVentures/caramelize",
+      docs: [extras: ["README.md"]]
+    ]
   end
 
   # Configuration for the OTP application
@@ -31,8 +32,11 @@ defmodule Caramelize.Mixfile do
   end
 
   defp deps do
-    [{:ex_doc, ">= 0.0.0", only: :dev},
-     {:credo, "~> 0.4", only: [:dev, :test]}]
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev},
+      {:credo, "~> 0.4", only: [:dev, :test]},
+      {:recase, "~> 0.4"}
+    ]
   end
 
   defp package do
@@ -46,5 +50,4 @@ defmodule Caramelize.Mixfile do
       }
     ]
   end
-
 end
