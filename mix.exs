@@ -33,9 +33,7 @@ defmodule Caramelize.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, ">= 0.0.0", only: :dev},
-      {:credo, "~> 0.4", only: [:dev, :test]},
-      {:recase, "~> 0.4"}
+      {:recase, "~> 0.5"}
     ]
   end
 
